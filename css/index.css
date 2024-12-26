@@ -1,0 +1,247 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 30px;
+    background-color: #000;
+    border-bottom: 1px solid #333;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ff0080;
+  }
+  
+  .nav-links a.active {
+    color: #ff0080; 
+  }
+  
+  .nav-links li:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: #fff;
+    margin-left: 10px;
+  }
+  
+  /* Sección de líneas diagonales */
+  .diagonal-lines {
+    position: relative;
+    background: repeating-linear-gradient(
+      45deg,
+      #ffffff,
+      #ffffff 10px,
+      #000000 10px,
+      #000000 20px
+    );
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .diagonal-left {
+    background: repeating-linear-gradient(
+      -45deg,
+      #ffffff,
+      #ffffff 10px,
+      #000000 10px,
+      #000000 20px
+    );
+  }
+  
+  .diagonal-right {
+    background: repeating-linear-gradient(
+      45deg,
+      #ffffff,
+      #ffffff 10px,
+      #000000 10px,
+      #000000 20px
+    );
+  }
+  
+  /* Fondo semitransparente */
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Textos */
+  h2, p {
+    margin: 0;
+    color: #fff;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  .footer-logo,
+  .footer-social,
+  .footer-location,
+  .footer-links {
+    flex: 1; 
+  }
+
+  .footer-location iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+  }
+  
+  /* Logotipo */
+  .footer-logo img {
+    height: 60px; 
+  }
+  
+  /* Redes sociales */
+  .footer-social {
+    text-align: center;
+  }
+  
+  .footer-social h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .footer-social ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .footer-social ul li a {
+    width: 30px; 
+    transition: transform 0.3s ease;
+  }
+
+  .fa-brands {
+    font-size: 20px;
+    margin-top: 5px;
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px 20px 0 0;
+}
+
+.fa-brands:hover {
+  color: #cd8f13;
+}
+  
+  .footer-social ul li a:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Enlaces de navegación */
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a.active {
+    color: #ff0080;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #ff0080;
+  }
+  
+  /* Footer bottom */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Apila los divs verticalmente en pantallas pequeñas */
+      align-items: center; /* Centra los elementos en dispositivos pequeños */
+    }
+  
+    .footer-logo,
+    .footer-social,
+    .footer-location,
+    .footer-links {
+      flex: unset; /* Elimina el tamaño igual en dispositivos pequeños */
+      width: 100%; /* Cada div ocupa el 100% del ancho */
+      text-align: center; /* Centra el contenido dentro de cada div */
+    }
+  
+    .footer-location iframe {
+      height: 200px; /* Ajusta la altura del mapa para dispositivos pequeños */
+    }
+  }
